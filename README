@@ -1,1 +1,25 @@
-TODO
+This is a generic OJS plugin tested for OJS 2.3.6
+
+Install
+======= 
+
+Install as usualy generic plugin
+
+Configuration
+=============
+
+the issueCarousel can work with custom custom images per issue or with the OJS cover image.
+
+the custom covers may complain the follow criteria:
+ - Directory: the generic cover path (p.e. public/journals/1/covers/)
+ - file name: Volume-Number-locale.png (p.e. 98-2-es_ES.png)
+ if custom cover not found /covers/default.png will be displayed
+
+Use
+===
+
+to include the carousel to your OJS include the carousel hook call to your template where you want to print it, as follow:
+
+ {call_hook name="Templates::Index::issueCarousel"}
+
+

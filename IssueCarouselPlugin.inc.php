@@ -118,7 +118,7 @@ class IssueCarouselPlugin extends GenericPlugin {
       $additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
       $init = "<script type='text/javascript' src='".Request::getBaseUrl() . '/'. $this->getPluginPath()."/js/init.js'></script>"; 
       $carouselLib = "<script type='text/javascript' src='".Request::getBaseUrl() . '/'. $this->getPluginPath()."/js/carouFredSel/jquery.carouFredSel.js'></script>"; 
-      $templateManager->assign('additionalHeadData', $additionalHomeData."\n\t".$carouselLib."\n\t".$init);
+      //MBR: $templateManager->assign('additionalHeadData', $additionalHomeData."\n\t".$carouselLib."\n\t".$init);
 
 		return false;
 	}

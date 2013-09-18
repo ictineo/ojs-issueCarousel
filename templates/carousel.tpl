@@ -18,14 +18,14 @@
       {$issue->getVolume()|escape} / {$issue->getNumber()|escape}
     </div>
     <div class="cLogo">
-      <a href="{url op="view" path=$issue->getBestIssueId($courrentJournal)}">
+      <a href="{url page="issue" op="view" path=$issue->getBestIssueId($courrentJournal)}">
         <img src="{$coverPagePath|escape}{if $customCovers == 'custom'}{$issue->getVolume()|escape}-{$issue->getNumber()|escape}-{$locale|escape}.png{else}{if $issue->getFileName($locale) eq ""}/covers/default.png{else}{$issue->getFileName($locale)|escape}{/if}{/if}" 
         {if $issue->getCoverPageAltText($locale) != ''} alt="{$issue->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if} />
       </a>
     </div>
     <div class="cText">
     {if $first eq "first"}
-      {translate key="plugin.generic.issuecarousel.current"}
+      {translate key="plugins.generic.issuecarousel.current"}
       {assign var=first value='nofirst'}
     {/if}
     </div>
